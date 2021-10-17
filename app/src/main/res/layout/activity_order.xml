@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderActivity">
+
+    <TextView
+        android:id="@+id/order_textview"
+        android:layout_marginLeft="@dimen/margin_wide"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/order_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="119dp"
+        tools:layout_editor_absoluteY="134dp" />
+
+    <TextView
+        android:id="@+id/name_label"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginLeft="@dimen/margin_wide"
+        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/order_textview"
+        tools:layout_editor_absoluteX="107dp"
+        tools:layout_editor_absoluteY="173dp" />
+
+    <EditText
+        android:id="@+id/name_input"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginLeft="@dimen/margin_wide"
+        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/enter_name_hint"
+        app:layout_constraintStart_toEndOf="@id/name_label"
+        app:layout_constraintBaseline_toBaselineOf="@id/name_label"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="143dp" />
+
+    <TextView
+        android:id="@+id/address_label"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginLeft="@dimen/margin_wide"
+        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/address_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_label"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="196dp" />
+
+    <EditText
+        android:id="@+id/address_input"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginLeft="@dimen/margin_wide"
+        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/enter_address_hint"
+        app:layout_constraintStart_toEndOf="@id/address_label"
+        app:layout_constraintBaseline_toBaselineOf="@id/address_label"
+        tools:layout_editor_absoluteX="122dp"
+        tools:layout_editor_absoluteY="175dp" />
+
+    <TextView
+        android:id="@+id/city_label"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginLeft="@dimen/margin_wide"
+        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/city_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address_label"
+        tools:layout_editor_absoluteX="273dp"
+        tools:layout_editor_absoluteY="375dp" />
+
+    <Spinner
+        android:id="@+id/city_spinner"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginLeft="@dimen/margin_wide"
+        android:layout_marginBottom="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/phone_input"
+        app:layout_constraintBottom_toTopOf="@id/phone_input"
+        app:layout_constraintStart_toEndOf="@id/city_label" />
+
+    <TextView
+        android:id="@+id/phone_label"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginLeft="@dimen/margin_wide"
+        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phone_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/city_label"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="277dp" />
+
+    <EditText
+        android:id="@+id/phone_input"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginLeft="@dimen/margin_wide"
+        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="11"
+        android:inputType="textPersonName"
+        android:hint="@string/enter_phone_hint"
+        app:layout_constraintStart_toEndOf="@id/phone_label"
+        app:layout_constraintBaseline_toBaselineOf="@id/phone_label"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="244dp" />
+
+    <TextView
+        android:id="@+id/note_label"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginLeft="@dimen/margin_wide"
+        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/note_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone_label"
+        tools:layout_editor_absoluteX="265dp"
+        tools:layout_editor_absoluteY="206dp" />
+
+    <EditText
+        android:id="@+id/note_input"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginLeft="@dimen/margin_wide"
+        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/enter_note_hint"
+        app:layout_constraintStart_toEndOf="@id/note_label"
+        app:layout_constraintBaseline_toBaselineOf="@id/note_label"
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="212dp" />
+
+    <TextView
+        android:id="@+id/delivery_label"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginLeft="@dimen/margin_wide"
+        android:layout_marginTop="45dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_delivery_method"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/note_label"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="261dp" />
+
+    <RadioGroup
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginLeft="@dimen/margin_wide"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/delivery_label"
+        tools:layout_editor_absoluteX="117dp"
+        tools:layout_editor_absoluteY="365dp" >
+
+    <RadioButton
+        android:id="@+id/sameday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/same_day"
+        android:onClick="onRadioButtonClicked"
+        tools:layout_editor_absoluteX="170dp"
+        tools:layout_editor_absoluteY="429dp" />
+
+    <RadioButton
+        android:id="@+id/nextday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next_day"
+        android:onClick="onRadioButtonClicked"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="343dp" />
+
+    <RadioButton
+        android:id="@+id/pickup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pick_up"
+        android:onClick="onRadioButtonClicked"
+        tools:layout_editor_absoluteX="243dp"
+        tools:layout_editor_absoluteY="287dp" />
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
